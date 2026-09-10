@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link  rel="stylesheet" href="Proyecto.css">
+    <title>Pastelería Mil Sabores - Carrito</title>
+</head>
+<body>
+    
+  <header class="site-header">
+    <div class="logo">
+      <img src="Mil sabores.png" alt="Logo Pastelería Mil Sabores">
+      <span class="logo-text">Pastelería Mil Sabores</span>
+    </div>
+ 
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+ 
+    <div class="header-actions">
+      <a href="carrito.html" class="cart-link active">🛒 Carrito (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+ 
+  <main>
+    <h1>Mi carrito de compras</h1>
+ 
+    <section class="carrito-layout">
+      <div class="carrito-items" id="carrito-items">
+        <!-- Los productos del carrito se generan dinámicamente desde localStorage -->
+        <p id="carrito-vacio">Tu carrito está vacío. <a href="productos.html">Ver productos</a></p>
+      </div>
+ 
+      <aside class="carrito-resumen">
+        <h2>Resumen</h2>
+        <p>Total: <span id="carrito-total">$0</span></p>
+ 
+        <div class="campo">
+          <label for="cupon">Ingresa el cupón de descuento</label>
+          <input type="text" id="cupon" name="cupon" placeholder="Ej: FELICES50">
+          <button type="button" id="btn-aplicar-cupon" class="btn-secundario">Aplicar</button>
+        </div>
+ 
+        <button type="button" id="btn-pagar" class="btn-primary">Pagar</button>
+      </aside>
+    </section>
+  </main>
+ 
+  <footer class="site-footer">
+    <p class="copyright">&copy; 2026 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+  </footer>
+ 
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

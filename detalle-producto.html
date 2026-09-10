@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link  rel="stylesheet" href="Proyecto.css">
+    <title>Detalle del Producto - Pastelería Mil Sabores</title>
+</head>
+<body>
+    <header class="site-header">
+    <div class="logo">
+      <img src="Mil sabores.png" alt="Logo Pastelería Mil Sabores">
+      <span class="logo-text">Pastelería Mil Sabores</span>
+    </div>
+ 
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html" class="active">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+ 
+    <div class="header-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarse</a>
+      <a href="carrito.html" class="cart-link">🛒 Carrito (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+ 
+  <main>
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Home</a> &gt;
+      <a href="productos.html">Productos</a> &gt;
+      <span id="breadcrumb-producto">Torta Cuadrada de Chocolate</span>
+    </nav>
+ 
+    <section class="detalle-producto">
+      <div class="galeria-producto">
+        <img id="imagen-principal" src="Torta cuadrada de chocolate.jpg" alt="Torta Cuadrada de Chocolate">
+        <div class="miniaturas">
+          <img src="img/torta-cuadrada-chocolate-1.jpg" alt="Vista 1">
+          <img src="img/torta-cuadrada-chocolate-2.jpg" alt="Vista 2">
+          <img src="img/torta-cuadrada-chocolate-3.jpg" alt="Vista 3">
+        </div>
+      </div>
+ 
+      <div class="info-producto">
+        <h1 id="nombre-producto">Torta Cuadrada de Chocolate</h1>
+        <p class="precio" id="precio-producto">$45.000 CLP</p>
+        <p class="descripcion" id="descripcion-producto">
+          Deliciosa torta de chocolate con capas de ganache y un toque de avellanas.
+          Personalizable con mensajes especiales.
+        </p>
+ 
+        <form id="form-agregar-carrito" class="form-agregar-carrito">
+          <div class="campo">
+            <label for="mensaje-personalizado">Mensaje personalizado (opcional)</label>
+            <input type="text" id="mensaje-personalizado" name="mensaje-personalizado" maxlength="100">
+          </div>
+ 
+          <div class="campo">
+            <label for="cantidad">Cantidad</label>
+            <select id="cantidad" name="cantidad">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+ 
+          <button type="submit" class="btn-primary">Añadir al carrito</button>
+        </form>
+      </div>
+    </section>
+ 
+    <section class="productos-relacionados">
+      <h2>Productos relacionados</h2>
+      <div class="grid-productos" id="lista-relacionados">
+        <!-- Se completará dinámicamente con JavaScript -->
+      </div>
+    </section>
+  </main>
+ 
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>Pastelería Mil Sabores</h4>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <p class="copyright">&copy; 2026 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+  </footer>
+ 
+  <script src="js/datos.js"></script>
+  <script src="js/detalle-producto.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

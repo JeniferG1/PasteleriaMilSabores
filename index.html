@@ -4,9 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet" href="Proyecto.css">
-    <title>Mil Sabores</title>
+    <title>Pasteleria Mil Sabores</title>
 </head>
 <body>
+
+    <header class="site-header">
+    <div class="logo">
+      <img src="Mil sabores.png" alt="Logo Pastelería Mil Sabores">
+    </div>
     
+ <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+ <div class="header-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarse</a>
+      <a href="carrito.html" class="cart-link">🛒 Carrito (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+ 
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>50 años endulzando momentos</h1>
+        <p>
+          Desde 1975, Pastelería Mil Sabores celebra la repostería chilena con tortas y
+          productos elaborados con recetas tradicionales y mucho cariño. Descubre nuestra
+          historia, nuestros sabores y crea momentos inolvidables con nosotros.
+        </p>
+        <a href="productos.html" class="btn-primary">Ver productos</a>
+      </div>
+      <div class="hero-image">
+        <img src="img/hero-torta.jpg" alt="Torta destacada de Pastelería Mil Sabores">
+      </div>
+    </section>
+ 
+    <section class="destacados">
+      <h2>Productos destacados</h2>
+      <div class="grid-productos">
+ 
+        <article class="product-card">
+          <img src="img/torta-cuadrada-chocolate.jpg" alt="Torta Cuadrada de Chocolate">
+          <h3>Torta Cuadrada de Chocolate</h3>
+          <p class="precio">$45.000 CLP</p>
+        </article>
+ 
+        <article class="product-card">
+          <img src="img/torta-circular-manjar.jpg" alt="Torta Circular de Manjar">
+          <h3>Torta Circular de Manjar</h3>
+          <p class="precio">$42.000 CLP</p>
+        </article>
+ 
+        <article class="product-card">
+          <img src="img/torta-especial-cumpleanos.jpg" alt="Torta Especial de Cumpleaños">
+          <h3>Torta Especial de Cumpleaños</h3>
+          <p class="precio">$55.000 CLP</p>
+        </article>
+ 
+        <article class="product-card">
+          <img src="img/torta-vegana-chocolate.jpg" alt="Torta Vegana de Chocolate">
+          <h3>Torta Vegana de Chocolate</h3>
+          <p class="precio">$50.000 CLP</p>
+        </article>
+ 
+      </div>
+    </section>
+ 
+    <section class="impacto">
+      <h2>Nuestro impacto</h2>
+      <p>
+        Cada compra apoya a estudiantes de gastronomía y a la comunidad local, quienes
+        forman parte de la historia de nuestra pastelería desde hace 50 años.
+      </p>
+    </section>
+  </main>
+ 
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>Pastelería Mil Sabores</h4>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categorías</h4>
+      <ul>
+        <li><a href="productos.html">Tortas Cuadradas</a></li>
+        <li><a href="productos.html">Tortas Circulares</a></li>
+        <li><a href="productos.html">Productos Sin Azúcar</a></li>
+        <li><a href="productos.html">Tortas Especiales</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <p>Mantente al tanto de nuestras novedades y promociones.</p>
+    </div>
+    <p class="copyright">&copy; 2026 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+  </footer>
+ 
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

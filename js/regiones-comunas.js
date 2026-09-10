@@ -1,0 +1,47 @@
+/* Fuente de regiones y comunas para el formulario de registro. */
+(function (global) {
+  'use strict';
+
+  const regionesComunas = {
+    metropolitana: [
+      'Santiago', 'Maipú', 'Puente Alto', 'Las Condes', 'La Florida', 'Ñuñoa'
+    ],
+    araucania: [
+      'Temuco', 'Padre Las Casas', 'Villarrica', 'Angol', 'Pucón'
+    ],
+    nuble: [
+      'Chillán', 'Chillán Viejo', 'San Carlos', 'Bulnes', 'Coihueco'
+    ]
+  };
+
+  function iniciarRegiones() {
+    const region = document.querySelector('#region');
+    const comuna = document.querySelector('#comuna');
+    if (!region || !comuna) return;
+
+    const seleccionInicial = region.value;
+    region.innerHTML = `
+      <option value="">-- Seleccione la región --</option>
+      <option value="metropolitana">Región Metropolitana de Santiago</option>
+      <option value="araucania">Región de la Araucanía</option>
+      <option value="nuble">Región de Ñuble</option>`;
+    region.value = seleccionInicial;
+
+    function actualizarComunas() {
+      const comunas = regionesComunas[region.value] || [];
+      comuna.innerHTML = '<option value="">-- Seleccione la comuna --</option>' +
+        comunas.map((nombre) => `<option value="${nombre}">${nombre}</option>`).join('');
+      comuna.disabled = comunas.length === 0;
+    }
+
+    region.addEventListener('change', actualizarComunas);
+    actualizarComunas();
+  }
+
+  global.REGIONES_COMUNAS = regionesComunas;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', iniciarRegiones);
+  } else {
+    iniciarRegiones();
+  }
+}(window));
