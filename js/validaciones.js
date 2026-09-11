@@ -150,13 +150,19 @@
     };
 
     M.guardarJSON(M.STORAGE_USER, usuario);
-    M.guardarJSON(M.STORAGE_SESSION, { correo: usuario.correo, nombre: usuario.nombre });
-    mensajeFormulario(formulario, 'Registro exitoso. Tu cuenta quedó guardada en este navegador.', true);
-    M.notificar('¡Bienvenido/a a Pastelería Mil Sabores!');
-    formulario.reset();
-    document.querySelector('#region')?.dispatchEvent(new Event('change'));
-    ['run', 'nombre', 'apellidos', 'correo', 'confirmar-correo', 'contrasena', 'confirmar-contrasena', 'region', 'comuna', 'direccion']
-      .forEach((id) => mostrarError(id, ''));
+
+M.guardarJSON(M.STORAGE_SESSION, {
+  correo: usuario.correo,
+  nombre: usuario.nombre
+});
+
+  window.dispatchEvent(new Event('mil:sesion-actualizada'));
+
+mensajeFormulario(
+  formulario,
+  'Registro exitoso. Tu cuenta quedó guardada en este navegador.',
+  true
+);
   }
 
   function iniciarLogin() {
@@ -176,10 +182,15 @@
         mostrarError('contrasena', 'La contraseña no coincide con la cuenta registrada.');
         return;
       }
-      M.guardarJSON(M.STORAGE_SESSION, { correo, nombre: usuario?.nombre || 'Cliente' });
-      mensajeFormulario(formulario, 'Inicio de sesión correcto. (Modo demostración frontend)', true);
+      M.guardarJSON(M.STORAGE_SESSION, {
+  correo,
+  nombre: usuario?.nombre || 'Cliente'
+});
       M.notificar('Sesión iniciada correctamente.');
     });
+    window.dispatchEvent(new Event('mil:sesion-actualizada'));
+
+
   }
 
   function iniciarRegistro() {

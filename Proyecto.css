@@ -140,6 +140,13 @@ main {
   margin: 5px 10px;
 }
 
+.sesion-usuario {
+  margin: 5px 10px;
+  color: #5D4037;
+  font-weight: 700;
+}
+
+
 .cart-link {
   padding: 8px 16px;
   background-color: hsla(350, 100%, 88%, 1);
