@@ -480,12 +480,12 @@ main {
 }
 
 .detalle-blog {
-  width: 75%;
+  width: 40%;
   margin: 0 auto;
 }
 
 .detalle-blog img {
-  margin: 16px 0 24px;
+  margin: 10px 0 10px;
 }
 
 /* ---------- Carrito ---------- */
