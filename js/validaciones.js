@@ -90,7 +90,7 @@
 
   function validarRegistro() {
     const run = campo('run')?.value.trim().toUpperCase() || '';
-    const runValido = mostrarError('run', !run ? 'El RUN es obligatorio.' : validarRun(run) ? '' : 'RUN inválido. Usa formato 19011022K, sin puntos ni guion.');
+    const validarRun = mostrarError('run', !run ? 'El RUN es obligatorio.' : validarRun(run) ? '' : 'RUN inválido. Usa formato 19011022K, sin puntos ni guion.');
     const nombreValido = validarTexto('nombre', 'El nombre', 50);
     const apellidosValido = validarTexto('apellidos', 'Los apellidos', 100);
     const correoValido = validarEmail('correo', true);
@@ -102,7 +102,7 @@
     const regionValida = mostrarError('region', campo('region')?.value ? '' : 'Selecciona una región.');
     const comunaValida = mostrarError('comuna', campo('comuna')?.value ? '' : 'Selecciona una comuna.');
     const direccionValida = validarTexto('direccion', 'La dirección', 300);
-    return runValido && nombreValido && apellidosValido && correoValido && confirmarCorreoValido &&
+    return validarRun && nombreValido && apellidosValido && correoValido && confirmarCorreoValido &&
       contrasenaValida && confirmarContrasenaValida && regionValida && comunaValida && direccionValida;
   }
 
